@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+bool checkPallindromeString(string s)
+{
+	int l=0;
+	int e=s.size()-1;
+	while(l<e)
+	{
+		if(s[l]!=s[e])
+		{
+			return 0;
+		}
+		l++;
+		e--;
+	}
+	return 1;
+}
+int main()
+{
+	string s;
+	getline(cin,s);
+	cout<<checkPallindromeString(s);
+ 
+	return 0;
+}
