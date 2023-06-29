@@ -1,0 +1,33 @@
+
+// non-matching characters in a string
+#include<bits/stdc++.h>
+#include<map>
+using namespace std;
+string nonMatching(string s)
+{
+	map<char,int>mp;
+	string ans="";
+	for(int i=0;i<s.size();i++)
+	{
+		mp[s[i]]++;
+	}
+	for(auto it:mp)
+	{
+		if(it.second==1)
+		{
+			ans=ans+it.first;
+			ans=ans+"  ";
+		}
+	}
+   reverse(ans.begin(),ans.end());
+   
+	return ans;
+    
+}
+int main()
+{
+	string s;
+	getline(cin,s);
+	cout<<nonMatching(s);
+	return 0;
+}
