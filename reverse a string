@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+string reverse(string s)
+{
+	int l=0;
+	int e=s.size()-1;
+	while(l<e)
+	{
+	   int temp=s[l];
+	   s[l]=s[e];
+	   s[e]=temp;
+	   l++;
+	   e--;
+	}
+	return s;
+}
+int main()
+{
+	string s;
+	getline(cin,s);
+	cout<<reverse(s);
+	return 0;
+}
